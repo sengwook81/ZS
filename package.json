@@ -1,0 +1,28 @@
+{
+  "name": "ZeroNodes",
+  "version": "0.1.0",
+  "description": "ZeroNodes",
+  "main": "hello-world-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "node.js",
+    "eclipse",
+    "nodeclipse"
+  ],
+  "dependencies": {
+        "express": "4.x",
+         "winston" : "x",
+        "body-parser":"x",
+        "method-override":"x",
+        "morgan":"x",
+        "multer":"x",
+        "mongoose" : "3.x"
+        
+  },
+  "author": "",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
