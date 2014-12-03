@@ -16,10 +16,13 @@
         "express": "4.x",
          "winston" : "x",
         "body-parser":"x",
+         "static-favicon":"x",
+         "errorhandler":"x",
         "method-override":"x",
         "morgan":"x",
         "multer":"x",
-        "mongoose" : "3.x"
+        "mongoose" : "3.x",
+        "jade": "x"
         
   },
   "author": "",

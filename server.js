@@ -25,6 +25,11 @@ console.log("Zero Server Ready Listen Port ["+port+"]");
 
 require('./app/main.js')(app);
 
+app.use(function(err, req, res, next){
+	  console.error(err.stack);
+	  res.send(500, 'Something broke!');
+});
+
 //DB 초기화 처리
 mongoose.connect('mongodb://localhost/zero', function(err) {
 	if (err) {
