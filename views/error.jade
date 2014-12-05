@@ -1,0 +1,10 @@
+extends ./layout/layout
+
+block content
+  .container
+    .row(ng-controller="indexController")
+      | P Wooop! #{status} ERROR
+      
+block script      
+  script(src="/ctrl/index.js")
+     

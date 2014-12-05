@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+    meta(charset='utf-8')
+    meta(name='generator', content='Bootply')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title ZServerTemplate
+    link(href='http://script.zs.com:12080/css/bootstrap.min.css', rel='stylesheet')
+    link(href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', rel='stylesheet')
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    block link
+    link(href='/css/styles.css', rel='stylesheet')
+  body
+    include header
+    .container#content(ng-app="contentApp")
+      block content
+    include footer
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
+    //script(src='http://script.zs.com:12080/js/bootstrap.min.js')
+    script(src='http://script.zs.com:12080/js/angular.min.js')
+    script(src='http://script.zs.com:12080/js/angular-animate.min.js')
+    block script
+    script(type='text/javascript').
+      var headerApp = angular.module('headerApp',[]);
+      headerApp.controller('headerCTRL',function ($scope) {
+        $scope.toggle = function (prop) {
+          $scope[prop] = !$scope[prop];
+         }
+       });
+      
+    
+    
+    
+    

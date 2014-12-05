@@ -1,0 +1,32 @@
+extends ./layout/layout
+
+if type == "edit"
+  block link
+    style
+      | .ta-editor { min-height: 300px;  height: auto;  overflow: auto;  font-family: inherit;  font-size: 100%; }
+
+block content
+  .container
+    .row(ng-controller="blogController")
+      | Blog Content {{myData}} #{type}
+      if type == "edit"
+        include ./blog/edit
+      else
+        each item in articles
+          include ./blog/article
+
+
+block script      
+  if type == "edit"
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular-sanitize.min.js')
+    script(src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.2/textAngular.min.js')
+    script(type='text/javascript').
+      var contentApp = angular.module('contentApp',['textAngular']);
+  else    
+    script(type='text/javascript').
+      var contentApp = angular.module('contentApp',[]);
+  script(src="/ctrl/blog.js")
+  
+  script(type='text/javascript').
+    angular.bootstrap('#content', ['contentApp']);
+    

@@ -1,0 +1,20 @@
+.panel.panel-default
+    .panel-heading.clearfix
+        span
+          h3.panel-title.pull-left(style='padding-top: 7.5px;') #{item.title}
+        
+        
+        .btn-group.pull-right
+          h6
+            span.label.label-default #{moment(item.uptdt).format("YYYY-MM-DD HH:mm")}
+      
+      .panel-body !{item.content}
+      
+      .panel-heading.clearfix
+        h4.panel-title.pull-left(style='padding-top: 7.5px;')
+        
+        .btn-group.pull-right
+          a.btn.btn-default.btn-xs(href='#') Edit
+          |  
+          a.btn.btn-default.btn-xs(href='#') Delete
+          

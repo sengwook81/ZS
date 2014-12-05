@@ -1,0 +1,19 @@
+.panel-heading.clearfix
+  .panel-heading.clearfix
+    span
+      input(type="hidden", ng-model="article.id" , value="#{article.id}")
+      input.form-control.input-lg(plaseholder="Title" , value="#{article.content}" ng-model="article.title")
+      .btn-group.pull-right
+        h6
+          span.label.label-default #{moment(article.uptdt).format("YYYY-MM-DD HH:mm")}
+    
+    .panel-body
+      text-angular(name="htmlcontent",ng-model="article.content")
+        | !{article.content}
+    .panel-heading.clearfix
+      h4.panel-title.pull-left(style='padding-top: 7.5px;')
+      
+      .btn-group.pull-right
+        a.btn.btn-default.btn-xs(href='#',ng-click="save()") Save
+        |  
+        a.btn.btn-default.btn-xs(href='#',ng-click="cancel()") Cancel
