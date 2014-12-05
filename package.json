@@ -14,6 +14,7 @@
   ],
   "dependencies": {
         "express": "4.x",
+        "moment" : "x",
          "winston" : "x",
         "body-parser":"x",
          "static-favicon":"x",
